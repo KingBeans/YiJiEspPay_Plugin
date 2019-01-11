@@ -1,0 +1,2 @@
+
+<DIV align=center><IFRAME src="<?php echo $iframe_url; ?>" frameBorder=0 marginwidth=0 marginheight=0 scrolling=no style="width:100%;height:550px;" width=700  height=400 scrolling=no ALLOWTRANSPARENCY="true"></IFRAME></DIV>

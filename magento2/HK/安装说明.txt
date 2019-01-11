@@ -1,0 +1,8 @@
+安装方式：
+    1、把插件代码放到/app/code/magento/目录下；
+    2、回到magento2项目根目录，执行 php bin/magento module:enable Magento_yjpay
+    3、继续执行 php bin/magento setup:upgrade
+  4、执行 php bin/magento setup:static-content:deploy
+    5、到后台支付方式配置，填写好相关参数后 执行 php bin/magento cache:clean ，到此安装基本完成
+
+注：若出现异常情况请重复第3和第4步

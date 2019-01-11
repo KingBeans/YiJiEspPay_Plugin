@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<yjpay_payment_success translate="label">
+        <label>One Page Checkout Success</label>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="yjpay/payment_success" name="yjpay.success" template="yjpay/payment/success.phtml"/>
+        </reference>
+    </yjpay_payment_success>
+</layout> 

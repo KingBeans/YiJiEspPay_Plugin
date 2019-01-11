@@ -1,0 +1,197 @@
+{}
+{"cardNo":"4024023876465028","cvv":"231","amount":15}
+{"userId":"20160825020000752433","cardNo":"4024023876465028","expirationDate":"0124","cvv":"532","amount":15}
+orderInfo:
+{}
+orderInfo:
+
+OrderInfo:
+
+{"userId":"20160825020000752433","cardNo":"4024023876465028","expirationDate":"0125","cvv":"521","amount":15,"currency":"USD"}
+{
+    "userId":"20160825020000752433",
+    "cardHolderFirstName":"nurew tewd",
+    "cardHolderLastName":"nurew tewd",
+    "cardNo":"4024023876465028",
+    "expirationDate":"0124",
+    "cvv":"423",
+    "amount":15,
+    "currency":"USD",
+    "deviceFingerprintId":"m453ghdewryt2g3562354_ED916435-FEC9-E166-DCCB-80EE665F7143",
+    "acquiringType":"CRDIT",
+    "language":"en",
+    "webSite":"efaun.yijifu.net"
+}
+{
+"userId":"20160825020000752433",
+"cardHolderFirstName":"test",
+"cardHolderLastName":"test",
+"cardNo":"4024023876465028",
+"expirationDate":"0124",
+"cvv":"352",
+"amount":15,
+"currency":"USD",
+"deviceFingerprintId":"m453ghdewryt2g3562354_B6B5DB9E-B74C-D525-FAB8-2AC0A70B196F",
+"acquiringType":"CRDIT",
+"language":"en",
+"webSite":"efaun.yijifu.net",
+"orderDetail":{
+        "billtoCountry":"US",
+        "billtoState":"California",
+        "billtoCity":"CA",
+        "billtoPostalcode":"95325",
+        "billtoFirstname":"test",
+        "billtoLastname":"test"
+        ,"billtoPhonenumber":"0123456789"
+        }
+}
+{"userId":"20160825020000752433","cardHolderFirstName":"test","cardHolderLastName":"test","cardNo":"4024023876465028","expirationDate":"0125","cvv":"532","amount":15,"currency":"USD","deviceFingerprintId":"m453ghdewryt2g3562354_55B6027D-6EB8-B8C1-4D46-A83E9C53C5A7","acquiringType":"CRDIT","language":"en","webSite":"efaun.yijifu.net","orderDetail":{"billtoCountry":"US","billtoState":"California","billtoCity":"CA","billtoPostalcode":"95325","billtoEmail":"test@test.com","billtoFirstname":"test","billtoLastname":"test","billtoPhonenumber":"0123456789","billtoStreet":"qrr   city"}}
+{
+"userId":"20160825020000752433",
+"cardHolderFirstName":"test",
+"cardHolderLastName":"test",
+"cardNo":"4024023876465028",
+"expirationDate":"0123",
+"cvv":"234"
+,"amount":15,
+"currency":"USD",
+"deviceFingerprintId":"m453ghdewryt2g3562354_7F344902-1D7B-A4E5-83E5-7E066559907B",
+"acquiringType":"CRDIT",
+"language":"en",
+"webSite":"efaun.yijifu.net",
+"orderDetail":{
+    "billtoCountry":"US",
+    "billtoState":"California",
+    "billtoCity":"CA",
+    "billtoPostalcode":"95325",
+    "billtoEmail":"test@test.com",
+    "billtoFirstname":"test",
+    "billtoLastname":"test",
+    "billtoPhonenumber":"0123456789",
+    "billtoStreet":"qrr   city ",
+    "shiptoCity":"CA",
+    "shiptoCountry":"US",
+    "shiptoFirstname":"test",
+    "shiptoLastname":"test",
+    "shiptoEmail":"test@test.com",
+    "shiptoPhonenumber":"0123456789",
+    "shiptoPostalcode":"95325",
+    "shiptoState":"California",
+    "shiptoStreet":"qrr   city"
+    }
+}
+{"userId":"20160825020000752433","cardHolderFirstName":"test","cardHolderLastName":"test","cardNo":"4024023876465028","expirationDate":"0521","cvv":"212","amount":15,"currency":"USD","deviceFingerprintId":"m453ghdewryt2g3562354_4CA353A2-6C93-0BE1-C1FD-4475A7D6BF49","acquiringType":"CRDIT","language":"en","webSite":"efaun.yijifu.net","orderDetail":{"billtoCountry":"US","billtoState":"California","billtoCity":"CA","billtoPostalcode":"95325","billtoEmail":"test@test.com","billtoFirstname":"test","billtoLastname":"test","billtoPhonenumber":"0123456789","billtoStreet":"qrr   city ","shiptoCity":"CA","shiptoCountry":"US","shiptoFirstname":"test","shiptoLastname":"test","shiptoEmail":"test@test.com","shiptoPhonenumber":"0123456789","shiptoPostalcode":"95325","shiptoState":"California","shiptoStreet":"qrr   city","logisticsFee":5}}
+{
+"userId":"20160825020000752433",
+"cardHolderFirstName":"test",
+"cardHolderLastName":"test",
+"cardNo":"4024023876465028",
+"expirationDate":"0126",
+"cvv":"231",
+"amount":15,
+"currency":"USD",
+"deviceFingerprintId":"m453ghdewryt2g3562354_0A5D5660-5D84-86E4-8E13-84E5235793A2",
+"acquiringType":"CRDIT",
+"language":"en",
+"webSite":"efaun.yijifu.net",
+"orderDetail":{
+    "billtoCountry":"US",
+    "billtoState":"California",
+    "billtoCity":"CA",
+    "billtoPostalcode":"95325",
+    "billtoEmail":"test@test.com",
+    "billtoFirstname":"test",
+    "billtoLastname":"test",
+    "billtoPhonenumber":"0123456789",
+    "billtoStreet":"qrr   city ",
+    "shiptoCity":"CA",
+    "shiptoCountry":"US",
+    "shiptoFirstname":"test",
+    "shiptoLastname":"test",
+    "shiptoEmail":"test@test.com",
+    "shiptoPhonenumber":"0123456789",
+    "shiptoPostalcode":"95325",
+    "shiptoState":"California",
+    "shiptoStreet":"qrr   city",
+    "logisticsFee":5,
+    "logisticsMode":"Flat Rate - Fixed",
+    "cardType":"VI",
+    "customerEmail":"test@test.com","merchantEmail":"test@test.com","merchantName":"test"}}
+{
+    "userId":"20160825020000752433",
+    "cardHolderFirstName":"test",
+    "cardHolderLastName":"test",
+    "cardNo":"4024023876465028",
+    "expirationDate":"0125",
+    "cvv":"423",
+    "amount":15,
+    "currency":"USD",
+    "deviceFingerprintId":"m453ghdewryt2g3562354_D9AD2D0B-4E72-36B4-46D0-E9C67158074E",
+    "acquiringType":"CRDIT",
+    "language":"en",
+    "webSite":"efaun.yijifu.net",
+    "orderDetail":{
+        "billtoCountry":"US",
+        "billtoState":"California",
+        "billtoCity":"CA",
+        "billtoPostalcode":"95325",
+        "billtoEmail":"test@test.com",
+        "billtoFirstname":"test",
+        "billtoLastname":"test",
+        "billtoPhonenumber":"0123456789",
+        "billtoStreet":"qrr   city ",
+        "shiptoCity":"CA",
+        "shiptoCountry":"US",
+        "shiptoFirstname":"test",
+        "shiptoLastname":"test",
+        "shiptoEmail":"test@test.com",
+        "shiptoPhonenumber":"0123456789",
+        "shiptoPostalcode":"95325",
+        "shiptoState":"California",
+        "shiptoStreet":"qrr   city",
+        "logisticsFee":5,
+        "logisticsMode":"Flat Rate - Fixed","cardType":"VI","customerEmail":"test@test.com","merchantEmail":"test@test.com","merchantName":"test"}}
+{"userId":"20160825020000752433","cardHolderFirstName":"test","cardHolderLastName":"test","cardNo":"4024023876465028","expirationDate":"0123","cvv":"432","amount":15,"currency":"USD","deviceFingerprintId":"m453ghdewryt2g3562354_668FCFB5-9A50-9A9F-C816-735225D84242","acquiringType":"CRDIT","language":"en","webSite":"efaun.yijifu.net","orderDetail":{"billtoCountry":"US","billtoState":"California","billtoCity":"CA","billtoPostalcode":"95325","billtoEmail":"test@test.com","billtoFirstname":"test","billtoLastname":"test","billtoPhonenumber":"0123456789","billtoStreet":"qrr   city ","shiptoCity":"CA","shiptoCountry":"US","shiptoFirstname":"test","shiptoLastname":"test","shiptoEmail":"test@test.com","shiptoPhonenumber":"0123456789","shiptoPostalcode":"95325","shiptoState":"California","shiptoStreet":"qrr   city","logisticsFee":5,"logisticsMode":"Flat Rate - Fixed","cardType":"VI","customerEmail":"test@test.com","merchantEmail":"test@test.com","merchantName":"test"}}
+{"userId":"20160825020000752433","cardHolderFirstName":"test","cardHolderLastName":"test","cardNo":"4024023876465028","expirationDate":"0125","cvv":"548","amount":15,"currency":"USD","deviceFingerprintId":"m453ghdewryt2g3562354_D90A9DB1-B1C8-098B-576E-791D396670C1","acquiringType":"CRDIT","language":"en","webSite":"efaun.yijifu.net","orderDetail":{"billtoCountry":"US","billtoState":"California","billtoCity":"CA","billtoPostalcode":"95325","billtoEmail":"test@test.com","billtoFirstname":"test","billtoLastname":"test","billtoPhonenumber":"0123456789","billtoStreet":"qrr   city ","shiptoCity":"CA","shiptoCountry":"US","shiptoFirstname":"test","shiptoLastname":"test","shiptoEmail":"test@test.com","shiptoPhonenumber":"0123456789","shiptoPostalcode":"95325","shiptoState":"California","shiptoStreet":"qrr   city","logisticsFee":5,"logisticsMode":"Flat Rate - Fixed","cardType":"VI","customerEmail":"test@test.com","merchantEmail":"test@test.com","merchantName":"test"}}
+{
+"userId":"20160825020000752433",
+"cardHolderFirstName":"test",
+"cardHolderLastName":"test",
+"cardNo":"4024023876465028",
+"expirationDate":"0123",
+"cvv":"421",
+"amount":15,
+"currency":"USD",
+"deviceFingerprintId":"m453ghdewryt2g3562354_6B68D3F3-A966-117A-CACE-D4D37235F79C",
+"acquiringType":"CRDIT",
+"language":"en",
+"webSite":"efaun.yijifu.net",
+"orderDetail":{
+    "billtoCountry":"US",
+    "billtoState":"California",
+    "billtoCity":"CA",
+    "billtoPostalcode":"95325",
+    "billtoEmail":"test@test.com",
+    "billtoFirstname":"test",
+    "billtoLastname":"test",
+    "billtoPhonenumber":"0123456789",
+    "billtoStreet":"qrr   city ",
+    "shiptoCity":"CA",
+    "shiptoCountry":"US",
+    "shiptoFirstname":"test",
+    "shiptoLastname":"test",
+    "shiptoEmail":"test@test.com",
+    "shiptoPhonenumber":"0123456789",
+    "shiptoPostalcode":"95325",
+    "shiptoState":"California",
+    "shiptoStreet":"qrr   city",
+    "logisticsFee":5,
+    "logisticsMode":"Flat Rate - Fixed",
+    "cardType":"001",
+    "customerEmail":"test@test.com",
+    "merchantEmail":"test@test.com",
+    "merchantName":"test"
+    },
+    "goodsInfoList":"[{\"goodsCount\":1,\"goodsNumber\":\"1\",\"goodsName\":\"test\",\"itemSharpUnitPrice\":10,\"itemSharpProductCode\":\"\"}]"}
+{"orderNo":"1513665265786356","protocol":"HTTP-FORM-JOSN","service":"espPciOrderPay","version":"2.0","partnerId":"20160825020000752433","signType":"md5","sign":"","merchOrderNo":"100000016","notifyUrl":"100000016","userId":"20160825020000752433","currency":"USD","amount":15,"cardNo":"4024023876465028","cvv":"154","cardHolderFirstName":"test","cardHolderLastName":"test","expirationDate":"0122","webSite":"efaun.yijifu.net","deviceFingerprintId":"m453ghdewryt2g3562354_E9428F1A-1813-2A91-921A-9A23254CDCA4","acquiringType":"CRDIT","language":"en","orderDetail":{"billtoCountry":"US","billtoState":"California","billtoCity":"CA","billtoPostalcode":"95325","billtoEmail":"test@test.com","billtoFirstname":"test","billtoLastname":"test","billtoPhonenumber":"0123456789","billtoStreet":"qrr   city ","shiptoCity":"CA","shiptoCountry":"US","shiptoFirstname":"test","shiptoLastname":"test","shiptoEmail":"test@test.com","shiptoPhonenumber":"0123456789","shiptoPostalcode":"95325","shiptoState":"California","shiptoStreet":"qrr   city","logisticsFee":5,"logisticsMode":"Flat Rate - Fixed","cardType":"001","customerEmail":"test@test.com","merchantEmail":"test@test.com","merchantName":"test"},"goodsInfoList":"[{\"goodsCount\":1,\"goodsNumber\":\"1\",\"goodsName\":\"test\",\"itemSharpUnitPrice\":10,\"itemSharpProductCode\":\"\"}]"}
+{"orderNo":"1513665866149423","protocol":"HTTP-FORM-JOSN","service":"espPciOrderPay","version":"2.0","partnerId":"20160825020000752433","signType":"md5","merchOrderNo":"100000017","notifyUrl":"http:\/\/efaun.yijifu.net\/index.php\/masapayapi\/masapay\/ty\/","userId":"20160825020000752433","currency":"USD","amount":15,"cardNo":"4024023876465028","cvv":"542","cardHolderFirstName":"test","cardHolderLastName":"test","expirationDate":"0122","webSite":"efaun.yijifu.net","deviceFingerprintId":"m453ghdewryt2g3562354_EC797999-C56D-6531-13B2-DA8D264724EC","acquiringType":"CRDIT","language":"en","orderDetail":{"ipAddress":"192.168.27.1","billtoCountry":"US","billtoState":"California","billtoCity":"CA","billtoPostalcode":"95325","billtoEmail":"test@test.com","billtoFirstname":"test","billtoLastname":"test","billtoPhonenumber":"0123456789","billtoStreet":"qrr   city ","shiptoCity":"CA","shiptoCountry":"US","shiptoFirstname":"test","shiptoLastname":"test","shiptoEmail":"test@test.com","shiptoPhonenumber":"0123456789","shiptoPostalcode":"95325","shiptoState":"California","shiptoStreet":"qrr   city","logisticsFee":5,"logisticsMode":"Flat Rate - Fixed","cardType":"\"001\"","customerEmail":"test@test.com","merchantEmail":"test@test.com","merchantName":"test"},"goodsInfoList":"[{\"goodsCount\":1,\"goodsNumber\":\"1\",\"goodsName\":\"test\",\"itemSharpUnitPrice\":10,\"itemSharpProductCode\":\"\"}]","sign":"8df0526740f6cbd1c94eacac5cd1643d"}

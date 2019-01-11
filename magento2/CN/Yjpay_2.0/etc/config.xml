@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <yjpay>
+                <active>1</active>
+                <title>Yjpay Card Payment Online</title>
+                <order_status>pending</order_status>
+                <instructions>Instruction.</instructions>
+                <!--<payment_action>authorize</payment_action>-->
+                <model>Magento\Yjpay\Model\Yjpay</model>
+                <place_order_url>yjpay/payment/checkout</place_order_url>
+                <group>offline</group>
+            </yjpay>
+            <!-- payment-config -->
+        </payment>
+    </default>
+</config>

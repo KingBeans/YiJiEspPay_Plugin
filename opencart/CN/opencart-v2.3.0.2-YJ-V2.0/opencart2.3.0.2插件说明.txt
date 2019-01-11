@@ -1,0 +1,18 @@
+1.基于opencart2.3.0.2版本开发
+
+2.将证书名字设置为 商户ID.fpx，插件配置页面Certificate Cipher是证书密码 设置为123456(或者证书密码)，并保存在upload/system文件下
+
+3.安装方式：upload文件的子文件直接覆盖到网站根目录
+
+4.支付模式：跳转支付收银台
+
+5.后台订单状态说明：
+
+	订单初始状态：Pending 等待处理
+
+	预授权： Processing 处理中 
+
+	支付完成：Complete 完成
+
+	支付失败：Failed 失败s
+

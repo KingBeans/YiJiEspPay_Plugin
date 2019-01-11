@@ -1,0 +1,25 @@
+/* ===================================================================
+11px = 85%        12px = 93%        13px = 100%        14px = 108%
+15px = 116%        16px = 123.1%    17px = 131%        18px = 138.5%
+19px = 146.5%    20px = 153.9%    21px = 161.6%    22px = 167%
+23px = 174%        24px = 182%        25px = 189%        26px = 197%
+=================================================================== */
+
+.paycheck{ border:1px solid #d6d4d4; border-radius:4px; margin-bottom:10px;}
+.paycheck a.cheque span{ font-size:12px;color:#333;font-weight:normal;margin-left:15px;}
+.paycheck form{ padding-left:170px; border-top:0px solid #d6d4d4;}
+.paycheck p{ margin-bottom:0;}
+
+.error-tips { color: red; margin-left: 5px; position: relative; top: 5px; }
+.success-tips {  margin-left: 5px; position: relative; top: 5px; color: green; background: url('./icon.png') no-repeat left; padding-left: 20px;}
+
+.normalinput {border: 1px solid #BBBBBB;float: left;height:30px;font: 13px Verdana;color: #666666; width:170px;}
+.successinput {background: #80F380; border: 1px solid green; color: green;}
+
+.paycheck1{ border:0;}
+.paycheck1 form{ display:block; border-top:none;}
+.paycheck1 #ccpay_submit{ display:inline-block; width:172px; height:56px; line-height:56px; text-align:center; color:#fff; font-size:22px; background:url(./pay.png) no-repeat 0 0; border:0;}
+.paycheck .cheque img{ vertical-align: middle; height: 23px;}
+.paycheck1 p.payment_module a{ padding-left: 44px;}
+.paycheck1 p.payment_module a:hover{ background: none;}
+.paycheck1 p.payment_module a span{ font-size: 12px; color:#333; font-weight: normal; margin-left: 15px;}

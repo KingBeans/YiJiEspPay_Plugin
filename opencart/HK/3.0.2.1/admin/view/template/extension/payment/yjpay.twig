@@ -1,0 +1,197 @@
+{{ header }}{{ column_left }}
+<div id="content">
+    <div class="page-header">
+        <div class="container-fluid">
+            <div class="pull-right">
+                <button type="submit" form="payment-yjpay" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
+                <a href="{{ cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
+            <h1>{{ heading_title }}</h1>
+            <ul class="breadcrumb">
+                {% for breadcrumb in breadcrumbs %}
+                    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        {%  if error_warning %}
+            <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i>
+                {{ error_warning }}
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        {% endif %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-pencil"></i> {{ heading_title }}</h3>
+            </div>
+
+            <div class="panel-body">
+                <form action="{{ action }}" method="POST" enctype="multipart/form-data" id="payment-yjpay" class="form-horizontal">
+
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
+                        <div class="col-sm-10">
+                            <select name="payment_yjpay_status" id="input-status" class="form-control">
+                                {% if payment_yjpay_status %}
+                                    <option value="1" selected="selected"> Enabled </option>
+                                    <option value="0">Disabled</option>
+                                {% else %}
+                                    <option value="1">Enabled</option>
+                                    <option value="0" selected="selected"> Disabled </option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-merchant">{{ text_sort_order }}</label>
+                        <div class="col-sm-10">
+                            <input size="10" type="number" name="payment_yjpay_sort_order"  value="{{ payment_yjpay_sort_order ? payment_yjpay_sort_order :'' }}" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-merchant">Geo Zone</label>
+                        <div class="col-sm-10">
+                            <select name="payment_yjpay_geo_zone_id" class="form-control">
+                                <option value="0" {{ payment_yjpay_geo_zone_id == 0 ? 'selected="selected"' : '' }}>All Zones</option>
+                                {% for geo_zone in geo_zones %}
+                                    <option value="{{ geo_zone.geo_zone_id }}" {{ payment_yjpay_geo_zone_id == geo_zone.geo_zone_id ? 'selected="selected"' : '' }} >{{ geo_zone.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-merchant">{{ entry_style }}</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="payment_yjpay_style" value="jump" {{ payment_yjpay_style and payment_yjpay_style == 'jump' ? 'checked' : 'checked' }} > Jump
+                            <input type="radio" name="payment_yjpay_style" value="embed" {{ payment_yjpay_style and payment_yjpay_style == 'embed' ? 'checked' : '' }} > Embed
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-status">{{ entry_debug }}</label>
+                        <div class="col-sm-10">
+                            <input type="radio" name="payment_yjpay_debug" value="1" {{ payment_yjpay_debug == 1 ? 'checked' : 'checked' }} > Sanbox
+                            <input type="radio" name="payment_yjpay_debug" value="0" {{ payment_yjpay_debug == 0 ? 'checked' : '' }} > On Line
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <legend>Partner Info</legend>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-merchant">{{ text_partnerId }}</label>
+                            <div class="col-sm-10">
+                                <input size="10" type="text" name="payment_yjpay_partnerId" value="{{ payment_yjpay_partnerId ? payment_yjpay_partnerId :'' }}" class="form-control" />
+                                <span class="error">{{ error_partnerId ? error_partnerId :  'partner Id'  }}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-merchant">{{ text_secretKey }}</label>
+                            <div class="col-sm-10">
+                                <input size="10" type="text" name="payment_yjpay_secretKey" value="{{ payment_yjpay_secretKey ? payment_yjpay_secretKey : '' }}" class="form-control" />
+                                <span class="error">{{ error_secretKey ? error_secretKey :  'secret key'  }}</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-merchant">{{ text_email }}</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="payment_yjpay_email" value="{{ payment_yjpay_email ? payment_yjpay_email :'' }}" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-merchant">{{ text_mname }}</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="payment_yjpay_mname" value="{{ payment_yjpay_mname ? payment_yjpay_mname :'' }}" class="form-control" />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Order Status Setting</legend>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-status">{{ entry_success_status }}</label>
+                            <div class="col-sm-10">
+                                <select name="payment_yjpay_success_status_id" class="form-control">
+                                    {% for order_status in order_statuses %}
+                                        <option value="{{ order_status.order_status_id }}" {{ payment_yjpay_success_status_id and payment_yjpay_success_status_id == order_status.order_status_id ? ' selected="selected" ' : '' }} >{{ order_status.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-status">{{ entry_authorizing_status }}</label>
+                            <div class="col-sm-10">
+                                <select name="payment_yjpay_authorizing_status_id" class="form-control">
+                                    {% for order_status in order_statuses %}
+                                        <option value="{{ order_status.order_status_id }}" {{ payment_yjpay_authorizing_status_id and payment_yjpay_authorizing_status_id == order_status.order_status_id ? ' selected="selected" ' : '' }} >{{ order_status.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-status">{{ entry_fail_status }}</label>
+                            <div class="col-sm-10">
+                                <select name="payment_yjpay_fail_status_id" class="form-control">
+                                    {% for order_status in order_statuses %}
+                                        <option value="{{ order_status.order_status_id }}" {{ payment_yjpay_fail_status_id and payment_yjpay_fail_status_id == order_status.order_status_id ? ' selected="selected" ' : '' }} >{{ order_status.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-status">Select Processing Order Status: </label>
+                            <div class="col-sm-10">
+                                <select name="payment_yjpay_processing_status_id" class="form-control">
+                                    {% for order_status in order_statuses %}
+                                        <option value="{{ order_status.order_status_id }}" {{ payment_yjpay_processing_status_id and payment_yjpay_processing_status_id == order_status.order_status_id ? ' selected="selected" ' : '' }} >{{ order_status.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Other Setting</legend>
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-status">{{ entry_currency }}</label>
+                            <div class="col-sm-10">
+                                <select name="payment_yjpay_currency" class="form-control">
+                                    <option value="USD" {{ payment_yjpay_currency and payment_yjpay_currency == 'USD' ? ' selected="selected" ' :  ' selected="selected" '  }} >USD</option>
+                                    <option value="CNY" {{ payment_yjpay_currency and payment_yjpay_currency == 'CNY' ? ' selected="selected" ' :  ' '  }} >CNY</option>
+                                    <option value="JPY" {{ payment_yjpay_currency and payment_yjpay_currency == 'JPY' ? ' selected="selected" ' :  ' '  }} >JPY</option>
+                                    <option value="AUD" {{ payment_yjpay_currency and payment_yjpay_currency == 'AUD' ? ' selected="selected" ' :  ' '  }} >AUD</option>
+                                    <option value="HKD" {{ payment_yjpay_currency and payment_yjpay_currency == 'HKD' ? ' selected="selected" ' :  ' '  }} >HKD</option>
+                                    <option value="GBP" {{ payment_yjpay_currency and payment_yjpay_currency == 'GBP' ? ' selected="selected" ' :  ' '  }} >GBP</option>
+                                    <option value="EUR" {{ payment_yjpay_currency and payment_yjpay_currency == 'EUR' ? ' selected="selected" ' :  ' '  }} >EUR</option>
+                                    <option value="SGD" {{ payment_yjpay_currency and payment_yjpay_currency == 'SGD' ? ' selected="selected" ' :  ' '  }} >SGD</option>
+                                    <option value="KRW" {{ payment_yjpay_currency and payment_yjpay_currency == 'KRW' ? ' selected="selected" ' :  ' '  }} >KRW</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group required">
+                            <label class="col-sm-2 control-label" for="input-status">{{ entry_language }}</label>
+                            <div class="col-sm-10">
+                                <select name="payment_yjpay_language" class="form-control">
+                                    <option value="en" {{ payment_yjpay_language and payment_yjpay_language == 'en' ? ' selected="selected" ' :  ' '  }} >English</option>
+                                    <option value="de" {{ payment_yjpay_language and payment_yjpay_language == 'de' ? ' selected="selected" ' :  ' '  }} >German</option>
+                                    <option value="es" {{ payment_yjpay_language and payment_yjpay_language == 'es' ? ' selected="selected" ' :  ' '  }} >Spain</option>
+                                    <option value="fr" {{ payment_yjpay_language and payment_yjpay_language == 'fr' ? ' selected="selected" ' :  ' '  }} >French</option>
+                                    <option value="ja" {{ payment_yjpay_language and payment_yjpay_language == 'ja' ? ' selected="selected" ' :  ' '  }} >Japanese</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{ footer }}

@@ -1,0 +1,172 @@
+<link rel="stylesheet" href="../../gcp/yijipay.css" type="text/css" media="all">
+  <div class="row">
+  <div class="col-xs-12">
+    <div class="paycheck paycheck1">
+          <p id="to_pay_form" class="payment_module">
+              <a class="cheque" href="javascript:;" title="Pay by check.">
+                  <img src="../../gcp/merpay.png" height="23"><span>Pay by Credit Card</span>
+              </a>
+          </p>
+      <form id="ccpay_form" name="ccpay_form" action="/modules/ccpay/payment.php" method="post" onsubmit="return ccpay_validate();" style="display:none;">
+            <input type="" name="ccpay_submit" id="ccpay_submit" value="Place Order">
+      <!-- <input type="hidden" name="ccpay_cc_credit" id="ccpay_cc_credit"> -->
+      <!-- <table style="margin-top:5px;align-self;display: block;border:0px solid #595A5E;padding: 0.6em;text-decoration: none;"> -->
+        <!-- <tbody> -->
+          <!--<tr>
+            <td style="width:130px;font: 13px Verdana;color: #666666;">&nbsp;&nbsp;Credit Card:</td>
+            <td>
+             <select name="ccpay_cc_credit" id="ccpay_cc_credit" style="width:80px;border: 1px solid #BBBBBB;float: left;height:25px;font: 13px Verdana;color: #666666; margin-right:10px">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="JCB">JCB</option>
+              </select>
+            </td>
+            <td>
+              <p id="ccpay_cc_credit_message" style="color: red;"></p>
+            </td>
+          </tr>  -->
+
+
+          <!-- <tr>
+            <td style="font: 100% Verdana;color: #666666;"><i style="color: red;">*</i>&nbsp;CardNumber:</td>
+            <td style="">
+            <input type="text" name="ccpay_cc_number" id="ccpay_cc_number" maxlength="16" class="normalinput">
+            </td>
+            <td>
+            <p id="ccpay_cc_number_message" style="color: red;"></p>          
+            </td>
+          </tr>
+          <tr>
+            <td style="font: 13px Verdana;color: #666666;"><i style="color: red;">*</i>&nbsp;Expiration Date:</td>
+            <td>
+              <select name="ccpay_cc_exp_month" id="ccpay_cc_exp_month" style="width:80px;border: 1px solid #BBBBBB;float: left;height:30px;font: 13px Verdana;color: #666666; margin-right:10px">
+                <option value="">Month</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select name="ccpay_cc_exp_year" id="ccpay_cc_exp_year" style="width:80px;border: 1px solid #BBBBBB;float: left;height:30px;font: 13px Verdana;color: #666666;">
+                <option value="">Year</option>
+              </select>    
+            </td>
+            <td>
+              <p id="ccpay_cc_exp_message" style="color: red;"></p>
+            </td>
+          </tr>
+          <tr>
+            <td style="font: 13px Verdana;color: #666666;"><i style="color: red;">*</i>&nbsp;CVV2/CSC:</td>
+            <td>
+            <input type="password" name="ccpay_cc_cvv" id="ccpay_cc_cvv" size="8px" maxlength="3" style="width:81px;border: 1px solid #BBBBBB;float: left;height:30px;font: 13px Verdana;color: #666666;"><div id="cvv_small" style="display:inline; margin: 0 10px; float: left;"><img src="../../gcp/cvv_small.gif" height="25px"></div>
+            </td>
+            <td>
+            <p id="ccpay_cc_cvv_message" style="color: red;"></p>
+            </td>
+          </tr> -->
+          <!-- <tr>
+            <td colspan="2"><img src="/gcp/security.jpg" style="width: 100%;  max-width: 300px; margin-left:5px"></td>
+            <td></td>
+          </tr> -->
+          <<!-- tr>
+            <td></td>
+            <td></td>                                            
+            <td></td>
+          </tr>
+        </tbody>
+      </table> -->
+
+      <!-- <input type="hidden" name="ccpay_cc_encrypted" id="ccpay_cc_encrypted"> -->
+      <!-- <input type="hidden" name="ccpay_cc_remark" id="ccpay_cc_remark"> -->
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script language="JavaScript" src="../../gcp/yiji.js"></script> 
+<script language="JavaScript" src="../../gcp/all.js"></script> 
+<script language="JavaScript" src="../../gcp/cc.js"></script> 
+<script language="javascript"  type="text/javascript">
+
+
+  onload = function ()
+    {
+     var year=new Date().getFullYear();
+     var sel = document.getElementById ('ccpay_cc_exp_year');
+     for ( var i = 0; i < 9; i++)
+     {
+       var option = document.createElement ('option');
+       year1 = (year+1).toString();
+       option.value = year1.substr(2);
+       var txt = document.createTextNode (year+i);
+       option.appendChild (txt);
+       sel.appendChild (option);
+     }
+    }
+
+//<![CDATA[
+  var ccvtip = cctips("cvv_small");
+  document.getElementById("cvv_small").onmouseover = function( ){
+    ccvtip.show({ content:"<img src=\"/gcp/cvv.gif\">" , p:"top" })
+  };
+  document.getElementById("cvv_small").onmouseout = function(){
+    ccvtip.hide();
+  };
+  function ccpay_validate() {
+    error = 0;
+    var error_message = "";
+    var ccpay_cc_number = document.getElementById("ccpay_cc_number").value;
+    var ccpay_cc_exp_month = document.getElementById("ccpay_cc_exp_month").value;
+    var ccpay_cc_exp_year = document.getElementById("ccpay_cc_exp_year").value;
+    var ccpay_cc_cvv = document.getElementById("ccpay_cc_cvv").value;
+    var ccpay_cc_credit= document.getElementById("ccpay_cc_credit").value;
+    document.getElementById("ccpay_cc_exp_message").innerHTML = "";
+    document.getElementById("ccpay_cc_number_message").innerHTML = "";
+    document.getElementById("ccpay_cc_cvv_message").innerHTML = "";
+    
+    
+   // if (validateCreditCard(ccpay_cc_number) != true ) {
+    //  document.getElementById("ccpay_cc_number_message").innerHTML = "Card Number! Is Error!";
+    //  error = 1;
+    //}
+
+
+    if(checkcardNo($('input[name=ccpay_cc_number]'))){
+      if (ccpay_cc_exp_month == "" ) {
+        document.getElementById("ccpay_cc_exp_message").innerHTML = "Credit Card Expires Month Is Error!<br>";
+        error = 1;
+      }
+      if (ccpay_cc_exp_year == "" ) {
+        document.getElementById("ccpay_cc_exp_message").innerHTML += "Credit Card Expires Year Is Error!";
+        error = 1;
+      }
+      if (validateCVV(ccpay_cc_cvv) != true ) {
+      document.getElementById("ccpay_cc_cvv_message").innerHTML = "CVC/CVV2 Is Error!";
+      error = 1;
+      }
+    } else {
+      error = 1;    
+    }
+    //if (ccpay_cc_credit == "" ) {
+    //  document.getElementById("ccpay_cc_credit_message").innerHTML = "Credit Card Is Error!<br>";
+    //  error = 1;
+    //}
+    if (error == 1) {
+      return false;
+    } else {      
+      document.getElementById("ccpay_submit").disabled=true;
+      document.getElementById("ccpay_submit").src="/gcp/loader.gif";
+      document.getElementById("ccpay_cc_remark").value = getTime();
+      return true;
+    }
+  }
+//]]>
+</script>
