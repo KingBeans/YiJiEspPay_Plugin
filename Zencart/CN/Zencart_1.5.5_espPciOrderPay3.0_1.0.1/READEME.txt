@@ -1,3 +1,0 @@
-1、测试环境秘钥跟公钥已经打包在includes/modules/pament/yjfpaycnew下
-2、线上环境将自己的秘钥更名为 商户ID.pfx格式 将公钥更名为易极付公钥.cer替换includes/modules/pament/yjfpaycnew下的pfx 与cer文件
-3、配置中file password 为秘钥密码 测试环境：123456 线上以邮件为准
